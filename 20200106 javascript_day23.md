@@ -61,9 +61,7 @@
    - 표준 API : 함수, 생성자 함수
    - BOM(Browser Object Model)  API : 브라우저가 자바스크립트에게 제공하는 API로 내장객체의 형식이다.
    - DOM(Document Object Model) API : 구성하는 태그들을 dom 형태로 만든다. 필요하면 속성값을 변화시킨다.
-   - HTML5 API - canvas, 
-
-   
+   - HTML5 API - canvas, Webstorage,
 
    
 
