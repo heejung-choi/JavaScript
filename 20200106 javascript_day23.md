@@ -23,7 +23,7 @@
 
 
 
-1. javascript 코드 작성방법
+1. JavaScript 코드 작성방법
 
 2. 데이터 타입과 변수 선언
 
@@ -42,3 +42,12 @@
    - v1=true; //boolean
 
      --------------------------------------------> typeof 연산자가 필요
+
+3. 연산자 (Java와 85% 비슷)
+
+   - 다른점은 === 세개로 되어있는 것도 있다.
+   - ==. ===, !=, !--, &&, ||, delete, typeof ...
+
+4. 제어문 : for, for each, while, do ~ while, break, continue
+
+5. 함수의 정의와 활용
