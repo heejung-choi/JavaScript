@@ -59,3 +59,9 @@
 
 
 
+- Java와 JavaScript는 ture가 소문자이고, R은 대문자, 파이썬은 대소문자 섞여있다.
+
+
+
+- underfined // 아직 값이 없다 라는 뜻
+
