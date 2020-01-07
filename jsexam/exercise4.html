@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>[ 자바스크립트 실습 - 4 ]</h1>
+<hr>
+<pre>
+<script>
+var ary = new Array(10);//[,,,,,,,,,]
+for(var i=0; i<10; i++){
+	ary[i]=Math.floor(Math.random()* 50) +1;	
+}
+document.writeln("<h2>"+"정렬 전:"+ary + "<br>"+"</h2>");
+ary.sort(function(a,b){ return a-b;});
+document.writeln("<h2>"+"정렬 후:"+ary + "<br>"+"</h2>");
+</script>
+</pre>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

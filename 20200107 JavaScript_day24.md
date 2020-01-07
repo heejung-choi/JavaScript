@@ -180,3 +180,114 @@
 
 
 
+## 배열
+
+(1) 다양한 타입의 데이터들을 하나의 배열에 구성할 수 있다.
+
+(2) 배열 생성 후에도 크기 변경 가능
+
+
+
+### 배열 생성
+
+- 배열 리터럴 방식
+
+  var a1 = [];
+
+  var a2 = [10,20,30];
+
+  var a3 = [true, '가나다', 100]
+
+  a1.length
+
+  a2.length
+
+  a3.length
+
+  a3[1]  -> '가나다'이다.
+
+  a2[10]=100;
+
+
+
+- 표준 API(Array 라는 생성자 함수를 이용) -> 가변갯수
+
+  var a4= new Array( ); //객체 생성해라
+
+  var a5= new Array(10); //배열의 크기 :하나가 왔는데 정수형 숫자가 왔다면 배열의 크기로 인식한다.
+
+  var a55= new Array('abc');
+
+  var a6= new Array(10,20);
+
+  var a7= new Array(true,3.5,'aaa','aa');
+
+
+
+### 배열의 활용
+
+pop() :배열 끝의 요소를 취득하여 삭제
+
+push(data): 배열 끝의 요소를 추가
+
+sort([fnc]): 요소를 오름차순으로 정렬
+
+```html
+var a =[10,3,7,20,6]
+a.sort();  -> [10,20,3,6,7]
+default는 문자열 sort이다. 문자열이 싫다면 아규먼트로 그에 맞는 뻥션을 줘야 한다.
+-> sort안에 function(a, b){return a-b}을 넣는다.
+a.sort(function(a, b){return a-b});
+
+```
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to sort the array.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+var fruits = [10,3,7,20,6];
+document.getElementById("demo").innerHTML = fruits;
+
+function myFunction() {
+  fruits.sort(function(a, b){return a-b});
+  document.getElementById("demo").innerHTML = fruits;
+}
+</script>
+
+</body>
+</html>
+
+```
+
+
+
+자바는 실제 원소값만 담는 반면 자바스크립트는  foreach문에서 인덱스를 담는다.(undefined가 아닌 것만 꺼내온다.), undefined 값까지 꺼내오고 싶으면 traditional for를 써야 한다.
+
+
+
+var d = new Date();//date 생성자
+
+
+
+var ary2 = ary.sort();라고 하면 ary 배열 자체가 변경된다.-> 리터블하다.
+
+
+
+```java
+var ary3 = [30, 11, 5, 27, 9]
+
+document.write(ary3 + "<br>"); 
+var ary4 = ary3.sort(function(a, b){ return b-a;});//30,27,11,9,5
+document.write(ary3 + "<br>");
+var ary4 = ary3.sort(function(a, b){ return a-b;});//5,9,11,27,30
+document.write(ary4 + "<br>");
+```
+

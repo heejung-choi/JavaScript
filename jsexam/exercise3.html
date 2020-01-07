@@ -5,21 +5,39 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>구구단 실습</h1>
+<h1>[ 자바스크립트 실습 - 3 ]</h1>
 <hr>
-<pre>
 <script>
-	while(true){
-		var num=window.prompt("1부터 9사이의 숫자를 입력해주세요.");			
-	if(num>=1&&num<10 ) {
-		document.writeln(num+"단 입니다.");
-		for(var su=1;su<=9;su++)
-			document.writeln(num+" x "+su+" = "+num*su);break;}
-	window.alert("1부터 9를 입력하세요");
-	} 
-	
+var ary = [10,5,7,21,4,8,18]
+var sum=0;
+for(var i=0; i<ary.length; i++){
+	var sum = sum+ ary[i];	
+}
+document.write("<h1>"+"모든 원소의 합 :"+sum + "</h1>");
+
+var max = ary[0];
+var min = ary[0];
+for(var i=1; i<=ary.length; i++){
+		if(max<ary[i]) {
+			max=ary[i]
+		}
+		if(min>ary[i]) {
+			min=ary[i]
+		}	
+}
+
+document.write("<ul><li>"+"최댓값 :"+max + "<br>"+"</li>");
+document.write("<li>"+"최솟값 :"+min + "</li></ul>");
 </script>
-</pre>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
 
