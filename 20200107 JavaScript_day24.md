@@ -281,7 +281,7 @@ var ary2 = ary.sort();라고 하면 ary 배열 자체가 변경된다.-> 리터�
 
 
 
-```java
+```javascript
 var ary3 = [30, 11, 5, 27, 9]
 
 document.write(ary3 + "<br>"); 
@@ -289,5 +289,54 @@ var ary4 = ary3.sort(function(a, b){ return b-a;});//30,27,11,9,5
 document.write(ary3 + "<br>");
 var ary4 = ary3.sort(function(a, b){ return a-b;});//5,9,11,27,30
 document.write(ary4 + "<br>");
+```
+
+
+
+```javascript
+함수: 수행 문장들을 담고있는 호출 가능한 모듈// 단독으로 호출 가능
+    -> 메서드와 구분하기 위해 단독이라는 것이 중요하다.
+
+메서드: 수행 문장들을 담고있는 호출 가능한 모듈, //객체를 통해서만 호출 가능, 객체의 멤버 정의되는 함수
+    
+자바 스크립트는 함수와 메서드 모두 지원한다.
+
+전역코드 : <script>수행문장들....</script>
+```
+
+** 함수 정의하기 위해서는 function을 반드시 붙여야 한다.
+
+
+
+### [명시적(선언적) 함수 정의]
+
+function 함수이름([매개변수 선언...]){
+}
+
+
+
+### [리터럴(표현식)방식 (익명)함수 정의]
+
+function ([매개변수 선언...]){
+}([아규먼트]);
+
+//만들고 ();를 줘서 바로 호출할 수 있다. 매개변수가 있다면 ([아규먼트])를 줘야 한다. 이것을 즉시 실행 함수 라고도 부른다.
+
+함수(function([매개변수 선언..])){
+
+}
+
+var 함수명 = function([매개변수 선언..]){
+
+}
+
+```javascript
+선언적(명시적)함수 정의 방법//함수정의의 표준
+function myFunction(){
+}
+
+표현식(익명)함수 정의 방법
+var myFunction =funtion(){
+}
 ```
 
