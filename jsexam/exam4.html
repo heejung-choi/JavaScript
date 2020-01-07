@@ -8,19 +8,20 @@
 <h1>자바스크립트의 변수 선언과 활용(2)</h1>
 <hr>
 <script>
-	document.write("<ul>");
+	document.write("<ul>");//순서가 필요없는 목록
 	var v1;
-	document.write("<li>"+ v1 +"</li>");
-	document.write("<li>"+ typeof v1 +"</li>");
-	document.write("<li>"+ (v1+10) +"</li>");
+	document.write("<li>"+ v1 +"</li>");//undefined
+	document.write("<li>"+ typeof v1 +"</li>");//undefined ㅌ
+	document.write("<li>"+ (v1+10) +"</li>");//NaN
+	//NaN : not a number
 	v1 = 100;
-	document.write("<li>"+ v1 +"</li>");
-	document.write("<li>"+ typeof v1 +"</li>");
-	document.write("<li>"+ (v1+10) +"</li>");
+	document.write("<li>"+ v1 +"</li>");//100
+	document.write("<li>"+ typeof v1 +"</li>");//number
+	document.write("<li>"+ (v1+10) +"</li>");//110
 	v1 = true;
-	document.write("<li>"+ v1 +"</li>");
-	document.write("<li>"+ typeof v1 +"</li>");
-	document.write("<li>"+ (v1+10) +"</li>");
+	document.write("<li>"+ v1 +"</li>");//true
+	document.write("<li>"+ typeof v1 +"</li>");//boolean
+	document.write("<li>"+ (v1+10) +"</li>");//true:1, false:0으로 계산
 	v1 = "가나다";
 	document.write("<li>"+ v1 +"</li>");	
 	document.write("<li>"+ typeof v1 +"</li>");
