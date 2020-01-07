@@ -16,3 +16,10 @@
 
 
 
+- exam2.html:17 Uncaught SyntaxError: Unexpected identifier
+  - 식별자 오류 에러를 개발자도구 console창에서 보여준다.
+
+
+
+
+
