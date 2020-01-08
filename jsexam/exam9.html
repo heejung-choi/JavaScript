@@ -10,11 +10,11 @@
 <script>
 var a1 = [];
 document.write("<h3>"+ typeof a1 +"</h3>");
-document.write("<h3>"+ Array.isArray(a1) +"</h3>");
+document.write("<h3>"+ Array.isArray(a1) +"</h3>");//Array.isArray :배열인지 판단해주는 메서드
 document.write("<h3>"+ a1.length +"</h3>");
 document.write("<h3>"+ a1[0] +"</h3>");
 document.write("<hr>");
-a1[4] = 100;
+a1[4] = 100; 
 document.write("<h3>"+ a1.length +"</h3>");
 for(var i=0; i < a1.length; i++)
 	document.write("<h4>"+ a1[i] +"</h4>");
