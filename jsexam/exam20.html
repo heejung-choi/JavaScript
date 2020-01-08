@@ -7,9 +7,10 @@
 <body>
 <h2>자바스크립트 변수의 스코프(2)</h2>
 <hr>
-<!-- <script src="util.js"></script> -->
+<script src="util.js"></script>
 <script>
 var g_v = 100;
+
 function scopeTest() {
 	var l_v = 1000;
 	writeNewLine("scopeTest() l_v : " + l_v);
@@ -17,8 +18,10 @@ function scopeTest() {
 }
 scopeTest();
 try {
-	writeNewLine("l_v : " + l_v  );
-} catch(e) {
+	writeNewLine("l_v : " + l_v  ); 
+	/* 이문장을 수행하다가 에러가 발생하면 catch블럭 수행해라.
+	catch블럭에 변수만 지정하면 된다. */
+catch(e) {
 	writeNewLine(e);
 }
 writeNewLine("g_v : " + g_v );
