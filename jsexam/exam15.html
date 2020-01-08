@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>가변 아규먼트 처리 함수 만들기</title>
+
+</head>
+<body>
+<h1>가변 아규먼트 처리 함수 만들기</h1>
+<hr>
+<script>
+function out(){
+	document.write("아규먼트 갯수: "+arguments.length+"<br>");//함수 안에서 argument를 만들면 arguments라는 배열변수가 자동으로 만들어 진다.
+	for(var i=0; i<arguments.length;i++)
+		console.log(arguments[i]);
+	console.log('-----------------------')
+}
+	out();
+	out(10); out(10,20); out('a','b','c'); out(1,2,3,4,5,6,7,8);
+
+</script>
+</body>
+</html>

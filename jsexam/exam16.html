@@ -8,7 +8,7 @@
 <h1>함수의 아규먼트 처리</h1>
 <hr>
 <script>
-function pr(p) {
+function pr(p) {//p라는 매개변수를 가지고 있다. p만큼 받겠다라는 뜻                    
 	document.write(typeof p + " : " + p + "<br>");	
 }
 pr(100);
@@ -16,7 +16,7 @@ pr("100");
 pr(true);
 pr(3.5);
 pr(new Array(1,2,3));
-//prNum(10);
+//prNum(10); //html문서는 위에서부터 아래로 읽기 때문에 prNum이 생성되지 않아 오류가 난다.
 //document.write("ㅋㅋㅋㅋㅋㅋ");
 </script>
 <hr>
@@ -40,7 +40,7 @@ pr(100000);
 <hr>
 <script>
 function prAll() {
-	for(var i=0; i < arguments.length; i++)
+	for(var i=1; i < arguments.length; i++)
 		document.writeln(arguments[i]);
 	document.write("<br>");
 	return arguments.length;

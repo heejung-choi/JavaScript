@@ -5,17 +5,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>함수에서 데이터의 타입채크</h2>
+<h2>함수에서 데이터의 타입체크</h2>
 <hr>
 <button onclick="clickProcess(100);">숫자</button>
 <button onclick="clickProcess('100');">문자열</button>
 <button onclick="clickProcess(true);">논리값</button>
 <button onclick="clickProcess(function(){ });">함수</button>
-<button onclick="clickProcess([ ]);">배열</button>
+<button onclick="clickProcess([ ]);">배열</button> <!-- 자바스크립트는 배열이 [] 자바는 {} -->
 <button onclick="clickProcess({ });">객체</button>
 <button onclick="clickProcess();">????</button>
 <script>
-function clickProcess(p) {
+function clickProcess(p) { //이벤트핸들러 -> 이벤트가 발생했을 때 호출되는 함수
 	if (typeof p == "number") {
 		alert("숫자 전달!!");
 	} else if (typeof p == "string") {
