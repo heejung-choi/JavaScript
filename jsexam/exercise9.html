@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<Style>
+hr{
+height: 10px;
+background-image : linear-gradient(45deg,#ebccff,#9900ff);
+}
+h1{
+color: #9900ff;
+}
+</Style>
+</head>
+<body>
+<h1>실습</h1>
+<hr>
+<script src="util.js"></script>
+<script>
+function DayInfo(p1,p2,p3,p4) { 
+	this.name = p1;  
+	this.year = p2;
+	this.month = p3;
+	this.day = p4;
+}
+ 	DayInfo.prototype.getTotalDays = function(){
+	var today = new Date();
+	var time = today.getTime();	
+	var my = new Date(this.year,(this.month-1),this.day);
+	var mytime = my.getTime();
+	var myday= Math.floor((time-mytime)/(60*60*24*1000));
+	
+		return this.name+"님은 태어난지 "+ myday+"일 되었어요.";
+}; 	
+	DayInfo.prototype.getKorDay = function(){
+		
+		var my = new Date(this.year,(this.month-1),this.day);
+		var a = my.getDay();
+		var days=['일','월','화','수','목','금','토'];
+		
+		return this.name+"님은 "+ days[a]+"요일에 태어났어요.";
+};	
+DayInfo.prototype.toString = function(){
+	return this.getTotalDays()+"<br>"+this.getKorDay()+"<hr>" ;
+};
+
+var DayInfo1 = new DayInfo('최희정',1995,10,8);
+var DayInfo2 = new DayInfo('조민승',1992,7,8);
+var DayInfo3 = new DayInfo('최유정',2001,1,18);
+
+writeColor(DayInfo1,"h1","#ff1a8c");
+writeColor(DayInfo2,"h2","#ff66b3");
+writeColor(DayInfo3,"h3","#ffb3d9");
+
+
+
+</script>
+</body>
+</html>

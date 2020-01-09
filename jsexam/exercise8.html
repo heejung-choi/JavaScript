@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>실습</h1>
+<hr>
+<script src="util.js"></script>
+<script>
+function printObject(p){
+	
+	if (typeof p !="object"){
+		return "object가 아닙니다.";
+	}
+	else{
+		writeColor(p.msg,p.tag,p.kor);		
+	}
+}
+
+var print1 ={ 	
+		tag : "h1",	
+		kor : "red",
+		msg :"첫번째 프린트 입니다."
+}
+var print2 ={ 	
+		tag : "h2",	
+		kor : "blue",
+		msg :"두번째 프린트 입니다."
+}
+var print3 ={ 	
+		tag : "h3",	
+		kor : "green",
+		msg :"세번째 프린트 입니다."
+}
+var print4 ={ 	
+		tag : "h4",	
+		kor : "pink",
+		msg :"네번째 프린트 입니다."
+}
+var print5 ={ 	
+		tag : "h5",	
+		kor : "Aqua",
+		msg :"다섯번째 프린트 입니다."
+}
+
+printObject(print1);
+printObject(print2);
+printObject(print3);
+printObject(print4);
+printObject(print5);
+
+</script>
+</body>
+</html>
