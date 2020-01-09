@@ -5,12 +5,14 @@
 <title>Insert title here</title>
 <script>
 //변수를 선언합니다.
-var child = window.open('/edu/first.html', '', 'width=300, height=200');
+var child = window.open('/edu/first.html', '서브창 이름 설정', 'width=300, height=200');
+/* 그런데 전체 화면크기가 뜬 이유는 width, height로 사이즈를 조정해줬기 때문이다 */
 var width = screen.width;
 var height = screen.height;
 child.moveTo(0, 0);
 child.resizeTo(width, height);   
 window.setInterval(function () {
+/* 	window.setInterval은 함수, 초  */
     child.resizeBy(-20, -20);
     child.moveBy(10, 10);
 }, 2000);  
@@ -21,4 +23,9 @@ window.setInterval(function () {
 </html>
 
 
+<!-- 
+resizeBy 현재크기에서 얼만큼 늘려라 줄여라,
+resizeto는 애당초 그 크기가 되도록 해라. 
 
+moveBy 현재 위치에서 이 위치로 옮겨가라.
+-->

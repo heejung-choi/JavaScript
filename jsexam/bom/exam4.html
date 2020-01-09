@@ -6,7 +6,7 @@
 <script>
 	var child = window.open('', '', 'width=300, height=200');
 	child.moveTo(0, 0);
-
+/* window 객체 있는 멤버 사용하면, window는 생략하고 멤버들에 접근할 수 있다. */
 	setInterval(function() {
 		child.moveBy(10, 10);
 		child.document.write(new Date());

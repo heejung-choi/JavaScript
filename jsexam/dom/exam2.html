@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script src="../util.js"></script>
+<script>
+window.onload = function(){
+var dom1 = document.getElementById("t1");
+console.log(dom1);
+console.log(dom1.textContent);
+var dom2 = document.getElementById("t3");
+console.log(dom2);
+var dom3 = document.getElementById("t4");
+console.log(dom3);
+var dom4 = document.getElementById("t5");
+console.log(dom4); 
+console.log(dom4.getAttribute("src"));
+console.log(dom4.src);  
+var dom5 = document.getElementById("p")
+/* dom5.textContent = "<h2>"+new Date().toLocaleString()+"</h2>";
+textContent는 할당되는 컨텐트를 다 플레인 컨텐트로 인식을 한다. 
+그래서 이것을 <h2>로 인식하기 위해서는 아래와 같이 해줘야 한다. */
+if(dom5)
+dom5.innerHTML = "<h2>"+new Date().toLocaleString()+"</h2>";
+}
+</script>
+<h1 id="t1">컨텐트1</h1>
+<h2 id="t2">컨텐트1</h2>
+<p id="t3">컨텐트1</p>
+<div id="t4">컨텐트1</div>
+<img id= "t5" src="../../images/totoro.png" width="100">
+<hr>
+<output id="p"></output>
+<!--  자바스크립트의 수행결과를 표현하는 용도로 쓴다. div, p태그를 써도 된다. -->
+<hr>
+<!-- <script>
+
+winodow.onload = function(){
+	var dom1 = document.getElementById("t1");
+	writeColor(dom1, "h3", "red");
+	writeColor(dom1.textContent, "h3","red");
+	var dom2 = document.getElementById("t3");
+	writeColor(dom2, "h3", "blue");
+	var dom3 = document.getElementById("t4");
+	writeColor(dom3, "h3", "green");
+	var dom4 = document.getElementById("t5");
+	writeColor(dom4, "h3", "magenta"); /* 작성된대로 출력 */
+	writeColor(dom4.getAttribute("src"), "h3", "magenta");
+	writeColor(dom4.src, "h3", "magenta"); /* 절대 URL로 출력 */
+	var dom5 = document.getElementById("p")
+	/* dom5.textContent = "<h2>"+new Date().toLocaleString()+"</h2>";
+	textContent는 할당되는 컨텐트를 다 플레인 컨텐트로 인식을 한다. 
+	그래서 이것을 <h2>로 인식하기 위해서는 아래와 같이 해줘야 한다.*/
+	dom5.innerHTML = "<h2>"+new Date().toLocaleString()+"</h2>";
+}
+</script> -->
+
+</body>
+</html>

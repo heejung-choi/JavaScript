@@ -13,9 +13,12 @@
 <hr>
 <script>
 write(navigator.platform, "h3");
+/* 현재 이 페이지가 보여지고 있는 시스템의 플랫폼 정보를 출력 */
 write(navigator.userAgent, "h3");
-var str = navigator.userAgent;
+/* 하나의 문자열을 출력 */
+var str = navigator.userAgent; /* 현재 모바일로 실행되고 있는지 확인 */
 if (str.match(/(ipad)|(iphone)|(ipod)|(android)|(webos)/i))
+	/* i 는 대소문자 구분하지 말고, 체크하라는 뜻 */
       write("모바일 디바이스 이군요", "h2");
 else
       write("모바일 디바이스가 아니군요", "h2");

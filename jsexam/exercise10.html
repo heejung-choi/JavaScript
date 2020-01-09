@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script>
+/* function go(){	
+	location.href = "http://www.daum.net ";
+}
+function go2(){	
+	location.href = "http://www.naver.com/";
+}
+function go3(){	
+	location.href = "http://www.google.com/";	
+} */
+
+var rand = Math.floor((Math.random()* 3) +1);
+
+var result = window.confirm("계속 수행할 까요?")
+
+if(!result){ 
+	var child = window.open('http://localhost:8000/edu/first.html', '취소버튼 수행시 실행', 'width=500 height=500');	
+}	
+else{
+	if(rand==1){
+		location.href = "http://www.daum.net ";
+		/* go(); */				
+	}			
+	else if (rand==2){
+		location.href = "http://www.naver.com/";
+		/* go2(); */				
+	}
+	else{
+		location.href = "http://www.google.com/";
+		/* go3(); */				
+	}		
+}
+
+</script>
+</body>
+</html>
