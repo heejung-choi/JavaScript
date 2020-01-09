@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>자바스크립트의 객체 생성과 새용(객체리터럴)</h1>
+<hr>
+<script src="util.js"></script>
+<script>
+var student1 ={ /* student 객체*/		
+		name : "둘리",
+		/* 객체 안에 속성을 생성하고 싶을 때 속성명, 속성값을 원하는 만큼 나열하면 된다. */
+		kor : 90,
+		eng :80,
+		math:95,
+		getSum : function(){
+			return this.kor+ this.eng+ this.math;
+		},
+		getAvg : function(){
+			return this.getSum()/3;
+		},
+		toString : function(){
+			return this.name +"학생의 총점은"+ this.getSum()+ "입니다.";
+		}
+}
+
+var student2 ={ /* student 객체*/		
+		name : "도우너",
+		/* 객체 안에 속성을 생성하고 싶을 때 속성명, 속성값을 원하는 만큼 나열하면 된다. */
+		kor : 85,
+		eng :90,
+		math:95,
+		getSum : function(){
+			return this.kor+ this.eng+ this.math;
+		},
+		getAvg : function(){
+			return this.getSum()/3;
+		},
+		toString : function(){
+			return this.name +"학생의 총점은"+ this.getSum()+ "입니다.";
+		}
+}
+
+var student3 ={ /* student 객체*/		
+		name : "또치",
+		/* 객체 안에 속성을 생성하고 싶을 때 속성명, 속성값을 원하는 만큼 나열하면 된다. */
+		kor : 90,
+		eng :90,
+		math:75,
+		getSum : function(){
+			return this.kor+ this.eng+ this.math;
+		},
+		getAvg : function(){
+			return this.getSum()/3;
+		},
+		toString : function(){
+			return this.name +"학생의 총점은"+ this.getSum()+ "입니다.";
+		}
+}
+writeColor("학생1 :"+student1,"h3","blue");
+writeColor("학생2 :"+student2,"h3","red");
+writeColor("학생3 :"+student3,"h3","green");
+</script>
+</body>
+</html>
