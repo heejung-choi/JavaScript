@@ -114,7 +114,7 @@ NodeList는 유사배열이라고 해서, 배열이라고 생각하고 쓰면 �
 
 찾은Element객체.getAttribute("속성명")
 
-찾은Element객체.setAttribute("속성명", 속성값)
+찾은Element객체.setAttribute("속성명", 속성값) //필수 속성이 아니면 setattribute를 써야 한다.
 
 찾은Element객체.removetAttribute("속성명")
 
@@ -132,7 +132,7 @@ NodeList는 유사배열이라고 해서, 배열이라고 생각하고 쓰면 �
 <button onclick="코드"> 1 </button>
 ```
 
-
+on + 이벤트 이름 / 코드에는 세미콜론으로 코드 여러개 불러와도 되고, 함수로 만들어서 함수로 불러와도 된다.
 
 ##### (2) 전역적 이벤트 모델(고전 이벤트 모델) : 태그는 태그대로 있고 이벤트를 자바스크립트 전역코드에서 구현하는 것
 
@@ -143,7 +143,9 @@ dom.onclick = function(){코드}; //function(){코드}; 는 이벤트 핸들러 
 
 ```
 
+이벤트 핸들러를 등록하고자 하는 대상의 DOM 객체를 찾아서 해당 DOM객체에 dom.onclick= function
 
+여기서 dom.onclick는 무조건 소문자이다.
 
 ##### (3) 표준 이벤트 모델
 
@@ -154,7 +156,9 @@ var dom = document.getElementsTagName("button")[0]
 dom.addEventListener("click". function(){코드});// "click"에는 이벤트 이름만 줘야 한다.
 ```
 
+dom.addEventListener("click". function(){코드}); : 이벤트 핸들러 등록시
 
+removeEventListener(eventName, handler) : 이벤트 핸들러 삭제시
 
 
 
