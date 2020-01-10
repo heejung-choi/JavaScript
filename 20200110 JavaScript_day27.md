@@ -132,6 +132,36 @@ window.setTimeout(function() {
 
 
 
-### data-xxx
+### data-xxx: 사용자가 필요에 의해 태그에 정의하는 속성
 
 data- 가 붙어있으면 임의의 속성으로 간주하여 허용한다.
+
+
+
+### [디폴트 이벤트 핸들러]
+
+HTML 태그에 디폴트로 등록되어 있는 이벤트 핸들러를 의미한다. 
+
+태그에 따라서는 눈에 띄는 디폴트 이벤트 핸들러를 가지고 있다.
+
+```javascript
+<a> : click 이벤트에 대한 핸들러를 내장하고 있다.
+
+<form> : submit 이벤트에 대한 핸들러를 내장하고 있다. 
+
+<a herf = "http://java.sun.com/">...</a>
+<a herf = "test.html/">...</a>
+<a herf = "#memo">...</a>
+# 엥커명 (메모라는 이름이 붙여있는 태그 위치로 가라.)
+<a herf = "test.html#subject">...</a>
+test.html을 들어가는데 subject이라는 앵커명이 설정된 것을 가장 먼저 보여주라고 하는 것이다.
+
+
+<a name="memo"></a>
+
+```
+
+- 인라인 이벤트 모델은 return false; 하면 a태그에 대한 디폴트 이벤트 핸들러가 없어진다.
+- 고전 이벤트 모델은 return false;
+- 표준 이벤트 모델은 e.preventDefault(); 
+- 고전은 이벤트 핸들러 2개 못하지만, 디폴트 이벤트 핸들러는 예외이다. 디폴트 이벤트 핸들러까지는 추가로 지정할 수 있다.
