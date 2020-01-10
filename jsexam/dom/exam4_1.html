@@ -17,6 +17,8 @@ function startTime() {
 	var d = new Date();
 	target.innerHTML = "<h2>"+d.toLocaleString()+"</h2>";
 	setId = window.setTimeout(startTime, 1000);
+/* 	1초후에 자기자신을 계속 다시 호출하게 효과를 주었다.
+	setinterval이랑 같은 효과이다. */
 }
 function stopTime() {
 	//target.innerHTML = "";

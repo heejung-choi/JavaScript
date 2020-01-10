@@ -6,10 +6,15 @@
 </head>
 <body>
 <h1>시간정보 출력하기</h1>
+<!-- 인라인 이벤트 핸들러 방식 -->
+<!-- 이런것은 아래에 구현해도 된다. -->
 <hr>
 <button onclick="startTime()">시간을 알려주라옹...</button>
 <button onclick="stopTime()">시간 출력을 종료하라옹...</button>
 <output></output>
+<!-- <output></output> 태그를 컨텐츠 없이 만들었다.
+이전에는 div를 썼었다.동적으로 사용할 때 이렇게 한다. 
+컨텐츠가 없었던 output태그에 아래의 내용을 써서 넣어주는 것이다.-->
 <script>
 var target = document.getElementsByTagName("output")[0];
 function startTime() {
