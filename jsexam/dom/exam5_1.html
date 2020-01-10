@@ -15,17 +15,18 @@
 <hr>
 <script>
     console.log(this);
-	function f1() {
+	function f1() {/*  매게변수를 안받으면 이벤트핸들러를 안받겠다는 것이다. */
 		alert(document.querySelectorAll('h1')[1].textContent);
 	}
 	var dom2 = document.querySelector('#t1');
     var dom3 = document.querySelector('#t2');
 	function f2(e) {
 		//alert(e.target.textContent);
-		alert(this.textContent);
+		alert(this.textContent);		
 	} 
     dom2.onclick = f2;
     dom3.addEventListener("click", f2);
 </script>
 </body>
 </html>
+

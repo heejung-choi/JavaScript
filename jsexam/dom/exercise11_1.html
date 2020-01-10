@@ -1,0 +1,50 @@
+<!-- 
+제시된 exercise11.html 파일을 가져가서 
+다음에 제시된 기능을 자바스크립트로 구현해 본다.
+
+1) <body> 태그안의 <h2> 태그를 찾아서 
+    "오늘은 XXXX년 X월 X일입니다." 를  출력하는 자바스크립트 코드를 작성한다.
+
+2) 제시된 버튼이 클릭되면 
+    위에 출력된 "오늘은 XXXX년 X월 X일입니다."의 칼라로
+    변경하는 이벤트 핸들러 구현을 3가지 방법으로 구현한다.
+
+    exercise11_1.html - inline 방식
+	exercise11_2.html - 전역 방식
+	exercise11_3.html - 표준 방식 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2 id="t1" ></h2>
+	<button onclick="f1()">빨강색</button>
+	<button onclick="f2()">파랑색</button>
+	<button onclick="f3()">노랑색</button>
+
+<script>
+var target = document.getElementsByTagName("h2")[0];
+var date = new Date();
+target.textContent = "오늘은 "+date.getFullYear()+"년 "+date.getMonth() + 1+"월 "+date.getDate()+ "일 입니다.";
+
+function f1() {			
+	target.style.color ="red";	
+}
+
+function f2() {			
+	target.style.color ="blue";
+}
+
+function f3() {				
+	target.style.color ="yellow";
+}
+
+
+
+/* 이때의 f1-f3는 이벤트 핸들러가 아니라, 그냥 함수이다.	 */	
+</script>
+</body>
+</html>

@@ -19,6 +19,8 @@
 	}
 	var dom2 = document.querySelector('#t1');
     var dom3 = document.querySelector('#t2');
+    /* 특정 태그만 찾겠다 라고 한다면 ID 속성을 주는것이 제일 좋다. */	
+    
 	function f2() {
 		alert(dom2.textContent);
 	}
@@ -26,7 +28,9 @@
 		alert(dom3.textContent);
 	}    
     dom2.onclick = f2;
+    /*    속성명이 반드시 소문자(f2) */
     dom3.addEventListener("click", f3);
+    /*     addEventListene는 안드로이드에서 지원한다. */
 </script>
 </body>
 </html>

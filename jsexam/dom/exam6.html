@@ -7,22 +7,30 @@
 <body>
 <h1>고전 이벤트 모델과 표준 이벤트 모델의 차이</h1>
 <hr>
-<button id="btn1">고전 이벤트 모델</button>
+<button>고전 이벤트 모델</button>
 <button>표준 이벤트 모델</button>
 <script>
-	var dom1 = document.querySelectorAll("button")[0];
-	var dom2 = document.querySelectorAll("button")[1];
+
+	var doms = document.querySelectorAll("button");
+	var dom1 = doms[0];
+	var dom2 = doms[1];
 	
 	dom1.onclick = function () {
 								 alert("첫 번째 핸들러 수행(고전)");
+								 /* alert("두 번째 핸들러 수행(고전)"); 두개다 수행하고 싶으면 이런식으로 안에 넣어줘야 한다. */
 							  };
 	dom1.onclick = function () {					
 								 alert("두 번째 핸들러 수행(고전)");
 							  };
+							  
+/* 	고전은 나중에 들어온것이 먼저 들어온것을 대체해 버린다.	 */					  
+							  
 	dom2.addEventListener("click", 
 			                 function () { alert("첫 번째 핸들러 수행(표준)");});
 	dom2.addEventListener("click", 
             function () { alert("두 번째 핸들러 수행(표준)");});
+	
+/* 	표준은 등록 된 순서대로 다 호출해 준다. */
 
 </script>
 </body>

@@ -22,6 +22,10 @@ function test3() {
 	alert("표준이벤트모델 버튼 클릭");
 	btn2.removeEventListener("mouseover", test3);
 }
+
+/* 고전과 표준은 한번만 수행하면 수행하지 않지만, 인라인은 계속 수행한다.
+고전과 표준은 한번 수행되면 해제하는 핸들러를 설정했기 때문이다.
+*/
 var btn1 = document.querySelector("#b1");
 var btn2 = document.getElementById("b2");
 btn1.onmouseover = test2;  // 고전

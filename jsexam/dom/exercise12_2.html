@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+@import url(//fonts.googleapis.com/earlyaccess/jejuhallasan.css);
+h1{
+font-family: 'Jeju Hallasan', cursive;
+color :	#9B1B30;
+font-size: 300%;	
+}
+section {
+		border : 1px solid #e60073;		
+		margin : 0px auto;
+		text-align : center;
+		padding: 5px;
+		background: #F5D6C6;	
+}
+button {
+		border : 1px solid white;
+		border-radius : 10px;
+		padding:30px;
+		font-family: 'Jeju Hallasan', cursive;
+		background: #FA9A85;
+		color :	#9B1B30;
+		font-size: 200%;		
+}
+h2{
+		color :	#9B1B30;
+		font-family: 'Jeju Hallasan', cursive;
+		font-size: 200%;
+
+}
+	</style>
+</head>
+<body>
+  <section>	
+		<h1>★ 구 구 단 ★</h1>		
+		<button id=1>1단</button>
+		<button id=2>2단</button>
+		<button id=3>3단</button>
+		<button id=4>4단</button>
+		<button id=5>5단</button>
+		<button id=6>6단</button>
+		<button id=7>7단</button>
+		<button id=8>8단</button>
+		<button id=9>9단</button>
+		<h2></h2>	
+  </section>
+<script>
+var dom = document.getElementsByTagName("h2")[0];
+var bt = document.getElementsByTagName("button");
+var gu;
+var dan = function(){
+	gu= '';
+	for(var i=1; i<=9; i++){
+			gu+=(this.id+" * "+i+" = "+this.id*i+"<br>");}
+dom.innerHTML= gu;}
+
+for (var j in bt)
+	bt[j].onclick = dan;
+	
+
+</script>
+</body>
+</html>
