@@ -44,6 +44,8 @@ function clickHandler() {
 function displayAlert(e) {
 	window.alert(e.target+"\n"+e.currentTarget+"\n"+this);
 	e.stopPropagation();
+	/* 조상들에게 올리지마!! */
+	/*  event 객체의 버블링을 제거해준다. */
 }
 window.addEventListener("load", clickHandler);
 </script>
