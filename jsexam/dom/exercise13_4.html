@@ -8,20 +8,16 @@
 	
 	<button onclick="show('yes')">이미지 보이기</button>
 	<button onclick="show('no')">이미지 숨기기</button>
-	<img src="">
+	<img src="http://localhost:8000/edu/images/totoro.png" style = "visibility:hidden"> 
 	
 	<script>
     var img = document.getElementsByTagName("img")[0];
 		var show = function(i){				
 			if(i=='yes'){
-				img.src="http://localhost:8000/edu/images/totoro.png" ;}
-			
-			 
+				img.style.visibility = "visible";}			 
 			else {
-				img.src="";	
-			}			
-		}
-	
+				img.style.visibility = "hidden";}			
+		}	
 	</script>
 </body>
 </html>
