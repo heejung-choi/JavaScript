@@ -10,6 +10,7 @@ function draw_m() {
   if(m_canvas.getContext) { 
     var ctx = m_canvas.getContext('2d'); 
 	ctx.translate(300,120);
+	/* -> 원하는대로 모든 그림이 옮겨간다. */
 	
 	ctx.save();
 	ctx.fillStyle="purple";
@@ -17,7 +18,8 @@ function draw_m() {
 	for (i=0;i<10;i++){
 	    ctx.globalAlpha = 1-(0.1*i);
 		ctx.rotate(Math.PI*2/10);
-		ctx.fillRect(10,10,150,50);		
+		ctx.fillRect(10,10,150,50);		 
+	/* 	36도씩 불투명 */
 	}
   }  
   else {
