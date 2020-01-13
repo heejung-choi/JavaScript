@@ -182,5 +182,13 @@ e.stopPropagation();
 
 
 
+//screenX 모니터 영역
+//pageX 브라우저 영역
 
+```
+function displayAlert(e) {	
+	window.alert("클릭 : " + e.pageX + ", " + e.pageY);
+	window.alert("클릭 : " + e.screenX + ", " + e.screenY);
+}
+```
 

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>	
+	<button id='yes'>이미지 보이기</button>
+	<button id='no'>이미지 숨기기</button>	
+	
+	<script>
+	var bt = document.getElementsByTagName("button");
+		var show = function(){				
+			if(this.id=='yes'){
+			 document.body.style.backgroundImage = "url('http://localhost:8000/edu/images/totoro.png')";}
+			else {
+			 document.body.style.backgroundImage ="none";				
+			}			
+		}
+	for(var i in bt)
+		bt[i].onclick = show;
+	</script>
+</body>
+</html>
+
