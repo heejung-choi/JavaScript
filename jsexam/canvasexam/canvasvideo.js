@@ -13,7 +13,7 @@ function push(){
   }else{
     video.play();
     loop=setInterval(processFrames, 33);
-/*    1000분의 33초마다 실행시켜라.*/
+/*    1000분의 33초마다 실행시켜라. 0.033초 마다 왼쪽의 데이터를 카피해가라! */
   }
 }
 function processFrames(){
