@@ -29,7 +29,8 @@
 	function ending(e){
 	  console.log("드래그종료");
 	  elem=e.target;  // this
-	  //elem.style.visibility='hidden';	  
+	  elem.style.visibility='hidden';// 원래있었던곳에서 사라지게 설정	
+	/*   돔객체 조차도 없애느냐, 돔객체는 남겨놓느냐에 따라 차이 있다. */
 	}
 	function dragged(e){
 	  console.log("드래그시작");

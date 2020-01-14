@@ -10,14 +10,17 @@
 	  var images=document.querySelectorAll('#picturesbox > img');
 	  for(var i=0; i<images.length; i++){
 	    images[i].addEventListener('dragstart', dragged, false);	  
-	  }
+	  }/*  for문은 4번 돈다. */
+	 
 	  drop=document.getElementById('dropbox');
 	  drop.addEventListener('dragover', function(e){ e.preventDefault(); }, false);
 	  drop.addEventListener('drop', dropped, false);
 	}
 	function dragged(e){
-	  elem=e.target; // this 동일 : 이벤트가 발생된 대상 DOM 객체
+	  var elem=this; // this 동일 : 이벤트가 발생된 대상 DOM 객체
+	  /* var elem=e.target; 로 써도 된다. */
 	  e.dataTransfer.setData('Text', elem.getAttribute('id'));
+	  /* 넷중에 하나의 ID 속성값을 지정한다. */
 	}
 	function dropped(e){
 	  e.preventDefault();
@@ -26,9 +29,7 @@
 	    var src=document.getElementById(id).src;
 	    drop.innerHTML+='<img src="'+src+'">';
 		//  drop.innerHTML=id + '가 드롭되었어요...';
-	  } else{
-	    //drop.innerHTML='not admitted';
-	    alert("황소는 드롭 불가");
+	                  
 	  } 
 	}
 	window.addEventListener('load', initiate, false);
