@@ -10,7 +10,7 @@
 	  var xhr;
 	  var id;
 	  function handleButtonPress(e){
-	     e.preventDefault();
+	     e.preventDefault(); // e.preventDefault();submmit 버튼은 원래 이벤트핸들러 기능이 있는데 그 기능을 해제하고 ajax로 하겠다라는 것
 	     xhr =  new XMLHttpRequest();
 	     form = document.querySelector("#loginf");
 	     id = document.querySelector("#id");
@@ -19,8 +19,10 @@
 	     alert(queryString);
 	     xhr.addEventListener("load", handleResponse);
 	     xhr.open("POST", form.action, true);
+	         /*  이전에는 get 이번에는 post 사용 */	        
 	     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	     xhr.send(queryString);
+	    /*  쿼리문자열을  아규먼트로 받아서 보냈다. */
 	  }
 	  function handleResponse() {
 		 var jsonObj = JSON.parse(xhr.responseText);

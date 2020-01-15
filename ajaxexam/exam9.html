@@ -10,9 +10,11 @@
 function getImage() {
 	var xhr = new XMLHttpRequest();	
 	xhr.responseType = 'blob';
+	/* 응답되는 타입은 blob 형이야.라는 뜻 실제 추출할때에는 response 사용한다. */
 	xhr.onload = function(e) {
   		if (this.status == 200) {
     		var blob = e.target.response
+    		/* e.target 대신 this를 써도 된다. */
     		var img = document.createElement('img');
     		img.width=100;
     		img.height=100;
@@ -20,8 +22,9 @@ function getImage() {
      	 		URL.revokeObjectURL(img.src); 
     		};  
     		img.src = URL.createObjectURL(blob);
+    		//가상 URL을 만들어 주는 API이다.
     		document.body.appendChild(img);    
-  		}
+  		}/*  가상 URL 만들어서 이미지 출력 */
 	};
 	xhr.open('GET', '/edu/images/duke_luau.png', true);
 	xhr.send();

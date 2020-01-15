@@ -11,12 +11,14 @@
 window.onload = function() {
 	var request = new XMLHttpRequest();
 	request.onreadystatechange = function() {
-		alert(request.readyState);
+		//alert(request.readyState); 
 		if(request.readyState == 4) {			
 			if(request.status == 200) {				
 				var str = request.responseText;
-				//alert(str);
+				alert(str);//실제 서버로부터 온 내용
 				var jsObj = JSON.parse(str);
+				alert(jsObj); //자바 객체로부터 온내용
+				//json문서를 js에서 읽기 쉽게 해주는 객체
 				var output = "";				
 				for(var i in jsObj)
 					output += "<h2>"+ jsObj[i] +"</h2>";
@@ -25,7 +27,7 @@ window.onload = function() {
 			}
 		}		
 	}
-	request.open("GET", "content/testjson1.txt", true);
+	request.open("GET", "content/testjson.txt", true);
 	request.send();
 }
 </script>

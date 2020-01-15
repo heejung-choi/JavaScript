@@ -17,22 +17,22 @@
      "wtext" : "${ wfKor }",
      "img" : <c:choose>
 		<c:when test='${ wfKor == "구름 많음"}'>
-					"images/cloud.png"
+					"/images/cloud.png"
 				</c:when>
 		<c:when test='${ wfKor == "구름 조금"}'>
-					"images/cloud_sun.png"
+					"/images/cloud_sun.png"
 				</c:when>
 		<c:when test='${ wfKor == "맑음"}'>
-					"images/sun.png"
+					"/images/sun.png"
 				</c:when>
 		<c:when test='${ wfKor == "비"}'>
-					"images/rain.png"
+					"/images/rain.png"
 				</c:when>
 		<c:when test='${ wfKor == "눈"}'>
-					"images/snow.png"
+					"/images/snow.png"
 				</c:when>
 		<c:otherwise>
-					"images/etc.png"
+					"/images/etc.png"
 				</c:otherwise>
 	</c:choose>
   }         
