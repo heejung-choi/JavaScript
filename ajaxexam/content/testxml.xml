@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<testxml>
+<testxml> <!-- -> dom 객체 블랭크 부분도 dom 객체가 된다.그래서 testxml의 자식 객체는 7개이다.(들여쓰기, 엔터까지 만들어져서)-->
 	<name>자바스크립트</name>
 	<age>23</age>
 	<kind>웹앱개발 전용 OOP 언어</kind>

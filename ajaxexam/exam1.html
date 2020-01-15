@@ -13,18 +13,21 @@
 <button onclick="location.href='content/sample.txt';">버튼을클릭하여요청</button>
 <br><br>
 <button onclick="requestAjax();">버튼을클릭하여요청(AJAX사용)</button>
-<output id="result"></output>
+<output id="result"></output><!-- 인라인 방식 -->
 <script>
 function requestAjax() {
 	var req = new XMLHttpRequest();
 	var result = document.getElementById("result");
 	req.onreadystatechange = function() {		
-		//alert("req.readyState : "+req.readyState);		
+		alert("req.readyState : "+req.readyState);		
 		if(req.status == 200 && req.readyState == 4)
+			/* status 200 이면 성공 404면 오류 (못찾겠다.) */
+			/* readyState는 언제 바뀔까? */
 			result.innerHTML += req.responseText; 
-	}	
-	req.open("GET", "content/sample.txt", true);	
-	req.send();	
+		/* 여기서는 textcontent써도 된다. */
+	}	/* 고전방식 */
+	req.open("GET", "content/sample.txt", true);/* open 메소드 , 비동기 방식(false주면 동기방식)*/
+	req.send();	 /* send 요청 안하면 ajax 실행 안된다. */
 }
 </script>
 </body>
