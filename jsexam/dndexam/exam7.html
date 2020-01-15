@@ -9,6 +9,8 @@
     border: 10px solid #000;
     background-color: #bbb;
 }
+/* file right는 파일을 읽어오는것  
+HML5에서는 출시하지 않았다*/
 </style>
 <script defer>
 window.onload = function() {
@@ -22,6 +24,8 @@ window.onload = function() {
     
     target.ondragover = function(event) {
         if(event.preventDefault) event.preventDefault();
+    /*     이벤트 객체가 preventDefault 속성을 갖고 있으면  
+    return false를 하면서 이벤트 핸들러를 해제 시킨다. */
         return false;
     }
     
@@ -39,7 +43,10 @@ window.onload = function() {
         if(event.preventDefault) event.preventDefault();
         target.classList.remove('hover');
         var filedata = event.dataTransfer.files[0];
+        /* 첫번째 것만 읽어들이게 하고 있다. */
         readFile(filedata);
+      /*   readFile을 가지고 아래 function에서 파일이름, 사이즈 들을 출력하게 하고 있다. */
+        
     }
 }
 
@@ -48,6 +55,9 @@ function readFile(file) {
     document.getElementById("fileSize").textContent = "(" + file.size + "byte)";
 
     var reader = new FileReader();
+ /* 객체를 생성한 다음에 load 이벤트에 대한 핸들러와 error에 대한 핸들러를 설정해줌으로써
+    load가 발생하면 읽혀준 내용을 텍스트로 읽어주게 하교,
+   	에러가 나면 에러 코드가 나오게 하고 있다. */
 
     reader.onload = function() {
         var display = document.getElementById("droparea");

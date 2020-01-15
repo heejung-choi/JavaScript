@@ -11,10 +11,11 @@
 	  drop.addEventListener('dragover', function(e){ e.preventDefault(); }, false);
 	  drop.addEventListener('drop', dropped, false);
 	}
+/*   파일에 대한것은 drag가 자동으로 생성된다. 그렇지만, drag에 대한 이벤트 헨들러는 해줘야 한다. */
 	function dropped(e){
 	  e.preventDefault();
 	  var files=e.dataTransfer.files;
-	  var list='';
+	  var list=''; /* 널문자열로 초기화 */
 	  for(var f=0;f<files.length;f++){
 	    list+='File: '+files[f].name+' '+files[f].size+' '+files[f].type+'<br>';
 	  }

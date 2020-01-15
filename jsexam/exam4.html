@@ -1,35 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+  <meta charset="utf-8">
+  <title>Drag and Drop</title>
+  <link rel="stylesheet" href="dragdrop.css">
+  <script>
+ /*  드롭박스가 캔바스태그 */
+    var canvas, drop;
+    function initiate(){
+	  var images=document.querySelectorAll('#picturesbox > img');
+	  for(var i=0; i<images.length; i++){
+	    images[i].addEventListener('dragstart', dragged, false);
+	    images[i].addEventListener('dragend', ending, false);
+	  }
+
+	  drop=document.getElementById('canvas');
+	  canvas=drop.getContext('2d');
+
+	  drop.addEventListener('dragover', function(e){ e.preventDefault(); }, false);
+	  drop.addEventListener('drop', dropped, false);
+	}
+	function ending(e){
+	  elem=e.target;
+	  //elem.style.visibility='hidden';
+	  //elem.style.display='none';
+	  //elem.parentNode.removeChild(elem);
+	}
+	function dragged(e){
+	  var elem=e.target;
+	  e.dataTransfer.setData('aa', elem.getAttribute('id'));
+	  e.dataTransfer.setDragImage(e.target, 0, 0); 
+	  /* -> 이것을 사용해서 드래그할때 끝의 부분을 잡고 옮기게 설정했다. 
+	  드래그 이미지의 reft top으로 드레그 부분을 설정하게 한다.*/	  
+	}
+	function dropped(e){
+		/* 캔버스태그 안에서 드롭 이벤트가 발생했을때 */
+	  e.preventDefault(); /* 기본 이벤트 핸들러 해제 */
+	  var id=e.dataTransfer.getData('aa'); 
+	  /* aa라는 이름의 드롭된 이미지의 아이디값 꺼냄 id 태그를 elem이라는 변수에 담았다. */
+	  var elem=document.getElementById(id);
+
+	  var posx=e.pageX-drop.offsetLeft;
+	  var posy=e.pageY-drop.offsetTop;
+/* 	캔버스 영역애 빈만큼 밀리기 때문에 그부분을 제외하고 출력해준다. */
+	  canvas.drawImage(elem,posx,posy);//, 70, 70);
+	 
+	}
+	window.addEventListener('load', initiate, false);
+  </script>
 </head>
 <body>
-<h1>자바스크립트의 변수 선언과 활용(2)</h1>
-<hr>
-<script>
-	document.write("<ul>");//순서가 필요없는 목록
-	var v1;
-	document.write("<li>"+ v1 +"</li>");//undefined
-	document.write("<li>"+ typeof v1 +"</li>");//undefined ㅌ
-	document.write("<li>"+ (v1+10) +"</li>");//NaN
-	//NaN : not a number
-	v1 = 100;
-	document.write("<li>"+ v1 +"</li>");//100
-	document.write("<li>"+ typeof v1 +"</li>");//number
-	document.write("<li>"+ (v1+10) +"</li>");//110
-	v1 = true;
-	document.write("<li>"+ v1 +"</li>");//true
-	document.write("<li>"+ typeof v1 +"</li>");//boolean
-	document.write("<li>"+ (v1+10) +"</li>");//true:1, false:0으로 계산
-	v1 = "가나다";
-	document.write("<li>"+ v1 +"</li>");	
-	document.write("<li>"+ typeof v1 +"</li>");
-	document.write("<li>"+ (v1+10) +"</li>");
-	document.write("<ul>");
-</script>
+  <section id="dropbox">
+    <canvas id="canvas" width="500" height="300"></canvas>
+  </section>
+  <section id="picturesbox">
+    <img id="image1" src="monster1.gif">
+    <img id="image2" src="monster2.gif">
+    <img id="image3" src="monster3.gif">
+    <img id="image4" src="monster4.gif">
+  </section>
 </body>
 </html>
-
-
-
